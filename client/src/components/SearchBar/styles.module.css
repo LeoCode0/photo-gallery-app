@@ -1,0 +1,27 @@
+.form{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.form input{
+  width: 80%;
+}
+
+.form button{
+  width: 20%;
+}
+
+.form button:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.form button, .form input{
+  font-size: 1.8rem;
+  border: 1px solid gray;
+  background: transparent;
+  padding: 5px;
+  color: white;
+}
