@@ -1,0 +1,13 @@
+.container{
+  width: 30%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.container img{
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+

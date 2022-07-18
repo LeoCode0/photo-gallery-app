@@ -1,8 +1,8 @@
 import React from 'react'
-
+import styles from "./styles.module.css"
 import { MdDeleteForever, MdFavorite } from "react-icons/md";
 
-export const Photo = ({ url, name, date = "Mon Jul 11 2022 12:33:03 GMT-0500"}, tags) => {
+export const Photo = ({ url, name, date, tags}) => {
   const photoDate = new Date(date)
   const addToFav = () => {
     console.log("Added to favorites")
@@ -11,10 +11,9 @@ export const Photo = ({ url, name, date = "Mon Jul 11 2022 12:33:03 GMT-0500"}, 
   const deletePhoto = () => {
     console.log("Photo deleted")
   }
-  console.log(tags)
 
   return (
-    <div>
+    <div className={styles.container} >
       <img src={url} alt={name} />
       <p>{name}</p>
       <p>{photoDate.getFullYear()}</p>
@@ -22,9 +21,9 @@ export const Photo = ({ url, name, date = "Mon Jul 11 2022 12:33:03 GMT-0500"}, 
         <button onClick={deletePhoto} ><MdDeleteForever /></button>
         <button onClick={addToFav} ><MdFavorite /></button>
       </div>
-      {/* <ul>
+      <ul>
         {tags.map(tag => <span>{tag}</span> )}
-      </ul> */}
+      </ul>
     </div>
   )
 }
